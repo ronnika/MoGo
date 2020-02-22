@@ -44,14 +44,15 @@ h1, h2, h3 {
 .intro__inner {
     width: 880px;
     margin: 0 auto;
+    
+    text-align: center;
 }
 
 .intro__title {
-    font-size: 150px;
-    line-height: 140px;
+    font-size: 130px;
+    line-height: 130px;
     color: #ffffff;
     font-weight: 700;
-    text-align: center;
     text-transform: uppercase;
 }
 
@@ -60,18 +61,17 @@ h1, h2, h3 {
     display: block;
     width: 60px;
     height: 4px;
-    margin: 60px auto 0;
+    margin: 10px auto 20px;
 
     background-color: #ffff;
 }
 
 .intro__subtitle {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-size: 72px;
     color: #ffffff;
     font-family: "Kaushan Script", cursive;
     font-weight: 400;
-    text-align: center;
 }
 
 
@@ -141,11 +141,92 @@ h1, h2, h3 {
 
  }
 
+ .nav__link_active {
+     color: #fce38a;
+ }
+
  .nav__link:hover {
     color: #fce38a;
  }
 
- .nav__link:hover::after {
+ .nav__link:hover::after,
+ .nav__link_active::after {
      opacity: 1;
  }
 
+ /* Button */
+
+ .btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+     
+    border: 3px solid#fff;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700; 
+    text-decoration: none;
+
+    transition: background-color .1s linear, color .1s linear;
+ }
+
+ .btn:hover {
+     background-color: #fff;
+     color: #333;
+ }
+
+ /* Slider */ 
+
+ .slider {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+ }
+
+ .slider__inner {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+
+ }
+
+ .slider__item {
+    width: 24%;
+    padding: 10px 0 0 0;
+    position: relative;
+
+    border-top: 3px solid #fff;
+
+    font-size: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+
+    opacity: 0.7;
+ }
+
+ .slider__item_active::before {
+     content: "";
+     display: block;
+     width: 70px;
+     height: 3px;
+     background-color: #f38181;;
+
+     position: absolute;
+     top: -3px;
+     left: 0;
+     z-index: 1;
+
+
+ }
+ .slider__num {
+     margin-right: 3px;
+     font-size: 24px;
+     font-weight: 700;
+ }
+
+ .slider__item_active {
+    opacity: 1;
+ }
