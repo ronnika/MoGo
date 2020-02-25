@@ -233,7 +233,7 @@ h1, h2, h3 {
 
  /* Section */
 
- .section {
+ section {
      padding: 80px 0;
  }
 
@@ -324,4 +324,43 @@ h1, h2, h3 {
     text-transform: uppercase;
 
     transition: opacity .2s linear;
+}
+
+/* Statistics */
+
+.statistics {
+    background-color: #95e1d3;
+}
+
+.stat {
+    display: flex;
+}
+
+.stat__item {
+    flex: 1 1 0;
+    padding: 70px 25px;
+
+    border-left: 1px solid #b5eae0;
+
+    color: #fff;
+    text-align: center;
+}
+
+.stat__item:last-child {
+    border-right: 1px solid #b5eae0;
+}
+
+.stat__count {
+    margin-bottom: 10px;
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 1;
+
+}
+
+.stat__text {
+    font-size: 14px;
+
+    text-transform: uppercase;
+
 }
