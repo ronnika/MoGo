@@ -244,6 +244,13 @@ hr {
      padding: 80px 0;
  }
 
+ .section-devices {
+     padding-bottom: 0;
+    background: url(../img/devices/bg.jpg) center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
  .section__header {
      margin: 0 auto 60px;
      max-width: 950px;
@@ -402,3 +409,25 @@ hr {
 .services__text {
     font-family: "Roboto", sans-serif;
 }
+
+.devices {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;    
+    position: relative;
+}
+
+.devices__tablet {    
+    display: block;
+}
+
+.devices__iphone {
+    display: block;    
+    position: absolute;
+    bottom: -80px;
+    right: 0;
+    z-index: 1;
+}
+
+
+
