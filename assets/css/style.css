@@ -17,6 +17,13 @@ h1, h2, h3 {
     margin: 0;
 }
 
+hr {
+    display: block;
+    margin: 35px 0;
+    height: 1px;
+    border: 0;  
+    background-color: #e5e5e5;
+}
 /* Container */
 
 .container {
@@ -233,7 +240,7 @@ h1, h2, h3 {
 
  /* Section */
 
- section {
+ .section {
      padding: 80px 0;
  }
 
@@ -363,4 +370,35 @@ h1, h2, h3 {
 
     text-transform: uppercase;
 
+}
+
+/* Services */
+
+.services {
+    display: flex;
+}
+
+.services__item {
+    flex: 1 1 0;
+    position: relative;
+    padding-left: 85px;
+    padding-right: 20px;
+}
+
+.services__icon {
+    position: absolute;
+    top: 2px;
+    left: 28px;
+    z-index: 1;
+}
+
+.services__title {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.services__text {
+    font-family: "Roboto", sans-serif;
 }
