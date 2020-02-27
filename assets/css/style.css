@@ -241,11 +241,11 @@ hr {
  /* Section */
 
  .section {
-     padding: 80px 0;
+     padding: 110px 0;
  }
 
  .section-devices {
-     padding-bottom: 0;
+    padding-bottom: 0;
     background: url(../img/devices/bg.jpg) center no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
@@ -424,10 +424,97 @@ hr {
 .devices__iphone {
     display: block;    
     position: absolute;
-    bottom: -80px;
+    bottom: -90px;
     right: 0;
     z-index: 1;
 }
 
+/* Section We Do */
 
+.we-do {
+    display:flex;
+}
+
+.we-do__item {
+    flex: 1 1 0;
+}
+
+.we-do__item:first-child {    
+    margin-right: 30px;
+}
+.we-do__img {
+    display: block;
+    width: 100%;
+}
+
+/*  Accordion */
+
+.accordion {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.accordion__item {
+    border: 1px solid #e5e5e5;    
+}
+
+.accordion__item:last-child {
+    margin-bottom: 0;    
+}
+
+.accordion__content {
+    display: none;
+    padding: 15px 20px;
+    font-family: "Roboto";
+    font-style: italic;
+}
+
+.accordion__item--active .accordion__content {
+    display: block;
+}
+
+.accordion__item--active .accordion__header {        
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion__header {
+    position: relative;
+    padding: 15px 20px 15px 65px;    
+    cursor: pointer;
+}
+
+.accordion__header::after {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 17px;
+    position: absolute;
+    top: 50%;
+    right: 20px;    
+    z-index: 1;
+    transform: translateY(-50%);
+    
+    background: url(../img/we-do/arrow.svg) no-repeat;
+     
+}
+
+.accordion__item--active .accordion__header::after {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+
+.accordion__title {
+    font-size: 14px;
+    color: #333333;
+    text-transform: uppercase; 
+}
+
+.accordion__icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    z-index: 1;
+    transform: translateY(-50%);
+}
 
