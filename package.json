@@ -1,0 +1,25 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "Study project, HTML/CSS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronnika/MoGo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ronnika/MoGo/issues"
+  },
+  "homepage": "https://github.com/ronnika/MoGo#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.1"
+  }
+}
