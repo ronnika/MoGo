@@ -255,7 +255,7 @@ hr {
         background-size: cover;
      }
 
-     &--reviews {
+     &--grey {
          background-color: #f8f8f8;
 
      }
@@ -359,6 +359,26 @@ hr {
         text-transform: uppercase;
     
         transition: opacity .2s linear;
+    }
+
+    &__info {
+        text-align: center;
+        margin: 30px;
+    }
+
+    &__name {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: $baseBlackText;
+        text-transform: uppercase;
+    }
+
+    &__prof {
+        font-size: 15px;
+        font-family: 'Roboto';
+        font-style: italic;
+        font-weight: 300;
+        color: $baseGreyText;
     }
 
  }
