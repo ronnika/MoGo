@@ -1,6 +1,8 @@
 $baseGreyText: #999999;
+$baseBlackText: #333333;
 $lightGreyBorder: #e5e5e5; 
 $navLinkActive: #fce38a;
+$baseBlueBg: #95e1d3;
 
 body {
     margin: 0;
@@ -305,7 +307,7 @@ hr {
 
  .about__item {
      width: 380px;
-     background-color: #95e1d3;
+     background-color: $baseBlueBg;
      position: relative;
  }
 
@@ -350,7 +352,7 @@ hr {
 /* Statistics */
 
 .statistics {
-    background-color: #95e1d3;
+    background-color: $baseBlueBg;
 }
 
 .stat {
@@ -525,3 +527,72 @@ hr {
     transform: translateY(-50%);
 }
 
+// Reviews 
+
+.reviews {
+    padding: 0 110px;
+    position: relative;    
+
+    &__btn {
+        display: block;
+        width: 22px;
+        height: 17px;
+        position: absolute;
+        top: 50%; 
+        z-index: 1;
+        transform: translateY(-50%);
+        
+        background: url(../img/we-do/arrow.svg) no-repeat;    
+        
+        &--next {
+            right: 20px;
+            transform:  rotate(90deg);
+        }
+
+        &--prev {
+            left: 20px;
+            transform:  rotate(270deg);
+        }
+    }
+
+    &__item {        
+        position: relative;
+        padding-left: 205px;
+    }
+
+    &__photo {
+        position: absolute;
+        top:0;
+        left:0;
+        z-index: 1;
+        display: block;
+        padding: 40px;
+
+        border: 3px solid $baseBlueBg;
+    }
+    &__text {
+        margin-bottom: 15px;
+        font-size: 24px;
+        color: $baseGreyText;
+        font-family: "Roboto";
+        font-weight: 300;
+        font-style: italic;
+    }
+    &__author {
+        font-size: 24px;
+        color: $baseBlackText;
+        font-family: "Kaushan Script";
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 60px;
+            height: 3px;
+            vertical-align: middle;
+            margin-right: 10px;
+                
+            background-color: #f38181;
+        }
+    }
+
+}
