@@ -299,55 +299,71 @@ hr {
  }
 
 
- .about {
+ .card {
      margin-top: 80px;
      display: flex;
      justify-content: space-between;
+
+     &__inner {
+        width: 380px;
+        background-color: $baseBlueBg;
+        position: relative;
+    }
+
+    &__inner:hover {
+        .card__img {
+            transform: translate3d(-10px, -10px, 0);  
+        }
+       
+    }
+
+    &__inner:hover  {
+        .card__img {
+            img {
+               opacity: 0.1; 
+            }
+        }
+    }
+
+    &__inner:hover {
+        .card__text {           
+            opacity: 1; 
+        }
+    }
+   
+    
+    &__img {
+        background: linear-gradient(to bottom, #e1cb7b,  #da7373);
+        transition: transform .2s linear;
+    }
+
+    &__img  { 
+        img {
+            display: block;
+        transition: opacity .1s linear;
+        }        
+    }
+
+    &__text {
+        width: 100%;
+        position: absolute;
+        top: 47%;
+        left: -10px;
+        transform: translate3d(0, -47%, 0);
+        z-index: 2;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        text-align: center;
+        opacity: 0;
+        text-transform: uppercase;
+    
+        transition: opacity .2s linear;
+    }
+
  }
 
- .about__item {
-     width: 380px;
-     background-color: $baseBlueBg;
-     position: relative;
- }
-
- .about__item:hover  .about__img {
-    transform: translate3d(-10px, -10px, 0);  
-}
-
- .about__item:hover  .about__img img{
-    opacity: 0.1;
-}
-.about__item:hover .about__text {
-    opacity: 1;
-}
-
- .about__img {
-     background: linear-gradient(to bottom, #e1cb7b,  #da7373);
-     transition: transform .2s linear;
- }
-
- .about__img img {
-    display: block;
-    transition: opacity .1s linear;
-}
-
-.about__text {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate3d(0, -50%, 0);
-    z-index: 2;
-    color: #fff;
-    font-weight: 700;
-    font-size: 18px;
-    text-align: center;
-    opacity: 0;
-    text-transform: uppercase;
-
-    transition: opacity .2s linear;
-}
+ 
 
 /* Statistics */
 
@@ -594,5 +610,41 @@ hr {
             background-color: #f38181;
         }
     }
+}
 
+.social {
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        display: block;
+        padding: 13px;
+        width: 55px;
+        height: 55px;
+        background-color: #fce38a;
+        text-decoration: none;
+
+        border-right: 1px solid #f9bd87;
+        transition: background .1s linear;
+
+        &:last-child {
+            border:none;
+        }
+
+        svg {     
+            margin: auto;
+            vertical-align: middle;           
+            fill: #f38181;
+            
+            transition: fill .1s linear;
+        } 
+
+        &:hover {
+           background-color: #f38181; 
+
+           svg {                
+            fill: #ffffff;
+        }      
+        }
+    }
 }
