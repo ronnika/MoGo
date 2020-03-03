@@ -262,9 +262,10 @@ hr {
      &--grey {
          padding: 70px 0;
          background-color: #f8f8f8;
-
      }
-
+     &--gallery {
+         padding-bottom: 0;
+     }
      &--clients {
         background: url(../img/clients/bg.jpg) center no-repeat;
         background-size: cover;
