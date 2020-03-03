@@ -783,14 +783,16 @@ hr {
 
     &__item {        
         position: relative;  
-        padding: 40px 40px 40px 180px;
+        padding: 0 40px 0 180px;
+        margin: 40px 0;
         width: 50%;
     }
     &__img {
         position: absolute;
-        top: 40px;
+        top: 0;
         left: 40px;
         z-index: 1;
+        border-radius: 50%;
     }
     &__name {
         margin-bottom: 15px;
