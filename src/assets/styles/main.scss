@@ -3,6 +3,7 @@ $baseBlackText: #333333;
 $lightGreyBorder: #e5e5e5; 
 $navLinkActive: #fce38a;
 $baseBlueBg: #95e1d3;
+$baseRed: #f38181;
 
 body {
     margin: 0;
@@ -230,7 +231,7 @@ hr {
                 display: block;
                 width: 70px;
                 height: 3px;
-                background-color: #f38181;;
+                background-color: $baseRed;
            
                 position: absolute;
                 top: -3px;
@@ -264,6 +265,11 @@ hr {
 
      }
 
+     &--clients {
+        background: url(../img/clients/bg.jpg) center no-repeat;
+        background-size: cover;
+     }
+
      &__header {
         margin: 0 auto 60px;
         max-width: 950px;
@@ -293,7 +299,7 @@ hr {
         height: 3px;
         margin: 30px auto 30px;
         
-        background-color: #f38181;
+        background-color: $baseRed;
     }
     &__text {
         font-size: 15px;
@@ -569,7 +575,7 @@ hr {
 
 .reviews {
     padding: 0 110px;
-    position: relative;    
+    position: relative; 
 
     &__btn {
         display: block;
@@ -607,6 +613,14 @@ hr {
         padding: 40px;
 
         border: 3px solid $baseBlueBg;
+
+        &--round {            
+            padding: 0;
+            border-radius: 50%;
+            border: none;
+            top: -30px;
+            left: -30px;
+        }
     }
     &__text {
         margin-bottom: 15px;
@@ -629,7 +643,7 @@ hr {
             vertical-align: middle;
             margin-right: 10px;
                 
-            background-color: #f38181;
+            background-color: $baseRed;
         }
     }
 }
@@ -656,13 +670,13 @@ hr {
         svg {     
             margin: auto;
             vertical-align: middle;           
-            fill: #f38181;
+            fill: $baseRed;
             
             transition: fill .1s linear;
         } 
 
         &:hover {
-           background-color: #f38181; 
+           background-color: $baseRed;
 
            svg {                
             fill: #ffffff;
@@ -758,4 +772,53 @@ hr {
         font-weight: 300;
         font-style: italic;
     }
+}
+
+// Clients 
+
+.clients {  
+    display: flex;
+    flex-wrap: wrap;
+    color: $baseBlackText;
+
+    &__item {        
+        position: relative;  
+        padding: 40px 40px 40px 180px;
+        width: 50%;
+    }
+    &__img {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        z-index: 1;
+    }
+    &__name {
+        margin-bottom: 15px;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+
+    &__prof {
+        font-size: 15px;
+        font-family: "Roboto";
+        font-weight: 300;
+        font-style: italic;
+
+        &::after {
+            content: "";
+            display: block;            
+            margin: 15px 0 20px 0;
+            height: 3px;
+            width: 60px;
+            background-color: $baseRed;
+        }
+    }
+
+    &__desc {
+        font-family: "Roboto";
+        font-weight: 400;
+        color: $baseGreyText;
+    }
+
+
 }
