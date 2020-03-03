@@ -821,6 +821,103 @@ hr {
         font-weight: 400;
         color: $baseGreyText;
     }
+}
 
+// Blog
+
+.blog {
+    display: flex;
+    justify-content: space-between;
+    &__item {
+        margin-right: 30px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+    }
+    &__header {
+        position: relative;
+    }
+    &__date {
+        position: absolute;
+        width: 60px;
+        height: 70px;
+        left: -10px;
+        bottom: 10px;
+        padding: 14px;
+
+        background-color: $baseBlueBg;
+
+        color: #ffffff;
+        text-align: center;        
+        line-height: 1;
+    }
+    &__day {     
+          
+        font-size: 30px;
+        font-weight: 700;
+    }
+    &__month {        
+        font-size: 14px;
+        font-family: 'Roboto';
+        font-style: italic;
+    }
+    &__content {
+        margin-top: 20px;
+    }
+    &__title {
+        font-size: 14px;
+        color: $baseBlackText;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    &__text {
+        margin-top: 10px;
+        font-family: "Roboto";
+        font-weight: 400;
+    }
+    &__statistics {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid $lightGreyBorder;
+        font-family: "Roboto";
+        font-weight: 400;
+        font-style: italic;
+        line-height: 1;
+    }
+    &__views {
+        position: relative;
+        padding-left: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: block;
+            width: 20px;
+            height: 15px;
+            background-image: url(../img/blog/view.svg);
+        }
+    }
+    &__comments {
+        position: relative;
+        margin-left: 20px;
+        padding-left: 25px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            display: block;
+            width: 20px;
+            height: 15px;
+            background-image: url(../img/blog/bubble.svg);
+        }
+    }
 
 }
