@@ -830,10 +830,7 @@ hr {
     display: flex;
     justify-content: space-between;
     &__item {
-        margin-right: 30px;
-        &:last-child{
-            margin-right: 0;
-        }
+        width: 31.5%;
     }
     &__img {
         display: block;
@@ -874,6 +871,12 @@ hr {
         color: $baseBlackText;
         text-transform: uppercase;
         text-decoration: none;
+        &:active {
+            color: $baseBlackText; 
+        }
+        &:hover{
+            text-decoration: underline;
+        }
     }
     &__text {
         margin-top: 10px;
