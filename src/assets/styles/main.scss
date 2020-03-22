@@ -270,6 +270,10 @@ hr {
         background: url(../img/clients/bg.jpg) center no-repeat;
         background-size: cover;
      }
+     &--map {
+        background: url(../img/map/map.jpg) center no-repeat;
+        background-size: cover;
+     }
 
      &__header {
         margin: 0 auto 60px;
@@ -924,4 +928,40 @@ hr {
         }
     }
 
+  
+
+}
+
+.map {
+    background-image: url(../img/map/map.jpg) cover no-repeat;
+
+    &__header {
+        text-align: center;
+        text-transform: uppercase;
+        &::before {
+            content: "";
+            display: block;
+            height: 26px;
+            width: 20px;
+            background: url(../img/map/pin.svg) no-repeat;
+            margin: 0 auto 20px auto;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 3px;
+            margin: 20px auto 20px;
+            
+            background-color: $baseRed;
+        }
+        
+    }
+    &__title {
+        line-height: 1;
+        font-size: 24px;
+        font-weight: 700;        
+        color: $baseRed;    
+        text-decoration: none;
+    }
 }
