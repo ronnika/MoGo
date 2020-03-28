@@ -933,6 +933,8 @@ hr {
 
 }
 
+// Map 
+
 .map {
     background-image: url(../img/map/map.jpg) cover no-repeat;
 
@@ -967,5 +969,25 @@ hr {
         &:hover {
             text-decoration: underline;
         }
+    }
+}
+
+// Footer
+
+.footer {
+    padding-top: 65px;
+    background-color: #f8f8f8;
+    &__logo {
+        font-size: 46px;
+        margin-bottom: 30px;
+        line-height: 1;
+        color: #cccccc;
+        font-weight: 700;
+    }
+    &__text {
+        
+        margin-bottom: 30px;
+        font-family: "Roboto";
+        font-weight: 400;
     }
 }
