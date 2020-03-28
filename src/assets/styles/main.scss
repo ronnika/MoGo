@@ -271,6 +271,7 @@ hr {
         background-size: cover;
      }
      &--map {
+        padding: 70px 0 70px;
         background: url(../img/map/map.jpg) center no-repeat;
         background-size: cover;
      }
@@ -951,7 +952,7 @@ hr {
             display: block;
             width: 60px;
             height: 3px;
-            margin: 20px auto 20px;
+            margin: 20px auto 0;
             
             background-color: $baseRed;
         }
@@ -963,5 +964,8 @@ hr {
         font-weight: 700;        
         color: $baseRed;    
         text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
