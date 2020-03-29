@@ -1,4 +1,5 @@
 $baseGreyText: #999999;
+$lightGreyText: #cccccc;
 $baseBlackText: #333333;
 $lightGreyBorder: #e5e5e5; 
 $navLinkActive: #fce38a;
@@ -977,17 +978,99 @@ hr {
 .footer {
     padding-top: 65px;
     background-color: #f8f8f8;
+    &__inner {
+        padding-bottom: 70px;
+    }
     &__logo {
         font-size: 46px;
         margin-bottom: 30px;
         line-height: 1;
-        color: #cccccc;
+        color: $lightGreyText;
         font-weight: 700;
     }
-    &__text {
-        
+    &__text {        
         margin-bottom: 30px;
         font-family: "Roboto";
         font-weight: 400;
+    }
+    &__social {
+        padding-bottom: 35px;
+        color: $baseBlackText;
+        &--header {
+            width: 100%;
+            padding-bottom: 20px;
+            border-bottom: 1px solid $lightGreyBorder;
+            font-size: 14px;
+            strong {
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+        &--content {            
+            display: flex;
+            align-items: center;            
+            padding-top: 20px;
+            font-family: "Roboto";
+            font-weight: 300;
+            font-style: italic;
+            color: $baseGreyText;
+        }
+        &--icons {
+            margin-left: 20px;
+            width: 220px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+// Subscribe 
+
+.subscribe {
+    display: flex;
+    width: 100%;
+    max-width: 380px;
+    &__input {
+        height: 40px;
+        width: 60%;
+        padding: 12px;
+        border: 1px solid $lightGreyBorder;
+        border-right: none;
+        font-family: "Roboto";
+        font-size: 15px;
+        font-weight: 300;
+        color: $baseBlackText;
+        line-height: 1.1;
+        font-style: italic;
+        &::placeholder {
+            color: $lightGreyText;
+        }
+        &:focus {
+            outline: none;
+            border-color: $baseBlueBg;
+        }
+    }
+    &__btn {
+        height: 40px;        
+        width: 40%;
+        padding: 12px 30px;
+        font-size: 14px;
+        color: #ffffff;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 1;
+        background-color: $baseBlueBg;
+        border: none;
+        cursor: pointer;
+        transition: background-color .1 linear;
+        &:hover {
+            background-color: #95e1d3d5; 
+        }
+        &:focus {
+            outline: none;
+        }
     }
 }
