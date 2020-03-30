@@ -978,20 +978,21 @@ hr {
 .footer {
     padding-top: 65px;
     background-color: #f8f8f8;
-    &__inner {        
+    &__inner {     
+        padding-bottom: 70px;
         display: flex;
         justify-content: space-between;
-        padding-bottom: 70px;
     }
     &__col {
+        height: 100%;
         &--1 {
-            width: 40%;
+            width: 47%;
         }
         &--2 {
             width: 30%;
         }
         &--3 {
-            width: 22%;
+            width: 22.5%;
         }
     }
     &__logo {
@@ -1037,7 +1038,7 @@ hr {
         }
     }
     &__title {
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         font-size: 14px;
         color: $baseBlackText;
         text-transform: uppercase;
@@ -1097,11 +1098,14 @@ hr {
 
 //  Blogs
 
-.blogs {
-    &__item{        
+.blogs    { 
+    &__item{ 
+        margin-bottom: 30px;       
         display: flex;
         align-items: center;
-        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
     &__content {
         padding-left: 20px
@@ -1122,5 +1126,49 @@ hr {
         font-family: "Roboto", sans-serif;
         font-weight: 300;
         font-style: italic;
+    }
+}
+
+// Instagram 
+
+.instagram {
+    display: flex;    
+    flex-wrap: wrap;
+    &__item {
+        flex: 1 1 0;
+        border: 1px solid #ffffff;
+    }
+    &__img {
+        display: block;
+    }
+    &__more {
+        margin-top: 20px;
+        font-size: 13px;
+        color: $baseBlackText;
+        font-family: "Roboto";
+        font-weight: 300;
+        font-style: italic;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+// Copyright 
+
+.copyright {
+    padding: 20px 0;
+    font-size: 14px;
+    color: $baseBlackText;
+    line-height: 1;
+    text-align: center;
+    border-top: 1px solid $lightGreyBorder;
+    &__link {
+        color: $baseRed;
+        text-decoration: none;
+        :hover {
+            text-decoration: underline;
+        }
     }
 }
