@@ -978,8 +978,21 @@ hr {
 .footer {
     padding-top: 65px;
     background-color: #f8f8f8;
-    &__inner {
+    &__inner {        
+        display: flex;
+        justify-content: space-between;
         padding-bottom: 70px;
+    }
+    &__col {
+        &--1 {
+            width: 40%;
+        }
+        &--2 {
+            width: 30%;
+        }
+        &--3 {
+            width: 22%;
+        }
     }
     &__logo {
         font-size: 46px;
@@ -1022,6 +1035,13 @@ hr {
             justify-content: space-between;
             align-items: center;
         }
+    }
+    &__title {
+        margin-bottom: 30px;
+        font-size: 14px;
+        color: $baseBlackText;
+        text-transform: uppercase;
+        line-height: 1;
     }
 }
 
@@ -1072,5 +1092,35 @@ hr {
         &:focus {
             outline: none;
         }
+    }
+}
+
+//  Blogs
+
+.blogs {
+    &__item{        
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__content {
+        padding-left: 20px
+    }
+    &__title {
+        font-size: 12px;
+        color: $baseBlackText;
+        text-decoration: none;
+        text-transform: uppercase;
+        line-height: 0;
+        &:hover {
+            text-decoration: underline;
+        }        
+    }
+    &__date {
+        font-size: 13px;
+        color: $baseGreyText;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-style: italic;
     }
 }
