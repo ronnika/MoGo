@@ -102,6 +102,7 @@ hr {
      padding-top: 30px;
 
     &__inner {
+        width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -118,6 +119,9 @@ hr {
  /* Nav */
 
  .nav {
+    width: 52%;
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
     text-transform: uppercase;
 
@@ -531,7 +535,9 @@ hr {
         &--active 
         .accordion__header {        
             border-bottom: 1px solid $lightGreyBorder;
-            transform: translateY(-50%) rotate(180deg);
+            &::after {
+                transform: translateY(-50%) rotate(180deg);
+            }
         }
     }
 
