@@ -37,7 +37,7 @@ hr {
 
 .container {
     width: 100%;
-    max-width: 1215px;
+    max-width: 1230px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -78,6 +78,22 @@ hr {
         
             background-color: #ffffff;
         }
+        @media (max-width: 1230px) {
+            font-size: 120px;
+            line-height: 120px;
+        }
+        @media (max-width: 990px) {
+            font-size: 80px;
+            line-height: 80px;
+        }
+        @media (max-width: 770px) {
+            font-size: 80px;
+            line-height: 70px;
+        }
+        @media (max-width: 575px) {
+            font-size: 60px;
+            line-height: 70px;
+        }
     }
 
     &__subtitle {
@@ -86,6 +102,18 @@ hr {
         color: #ffffff;
         font-family: "Kaushan Script", cursive;
         font-weight: 400;
+        @media (max-width: 1230px) {
+            font-size: 54px;
+        }
+        @media (max-width: 990px) {
+            font-size: 46px;
+        }
+        @media (max-width: 770px) {
+            font-size: 44px;
+        }
+        @media (max-width: 575px) {
+            font-size: 40px;
+        }
     }
 }
 
@@ -170,6 +198,9 @@ hr {
             }
         }
      }  
+     @media (max-width: 770px) {
+        display: none;
+    }
  }
 
  /* Button */
@@ -214,6 +245,11 @@ hr {
         font-size: 24px;
         font-weight: 700;
     }
+    &__text {
+        @media (max-width: 770px) {
+            display: none;
+        }
+    }
      &__item {
         width: 24%;
         padding: 10px 0 0 0;
@@ -232,7 +268,7 @@ hr {
             &::before {
                 content: "";
                 display: block;
-                width: 70px;
+                width: 33%;
                 height: 3px;
                 background-color: $baseRed;
            
@@ -306,7 +342,7 @@ hr {
         display: block;
         width: 60px;
         height: 3px;
-        margin: 30px auto 30px;
+        margin: 30px auto;
         
         background-color: $baseRed;
     }
@@ -315,16 +351,49 @@ hr {
         font-family: "Roboto";
         font-weight: 400;
      }
+     @media (max-width: 770px) {
+        padding: 40px 0;
+        &--grey {
+            padding: 40px 0;
+        }
+     }
+     @media (max-width: 575px) {
+        &__header {
+            margin: 0 auto 30px;
+        }
+        &__title {
+            font-size: 24px;
+            &::after {
+                margin: 20px auto;
+            }
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
  }
 
 
  .card {
      margin-top: 80px;
      display: flex;
+     flex-wrap: wrap;
      justify-content: space-between;
+     &__item {         
+        width: 33.333%;
+        padding: 0 15px;
+        @media (max-width:770px) {
+            width: 100%;
+            max-width: 410px;
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+     }
 
      &__inner {
-        width: 380px;
+        width: 100%;
         background-color: $baseBlueBg;
         position: relative;
         &:hover {
@@ -340,12 +409,15 @@ hr {
         }
     }    
     &__img {
+        width: 100%;
         background: linear-gradient(to bottom, #e1cb7b,  #da7373);
-        transition: transform .2s linear;
+        transition: transform .1s linear;
     }
     &__img  { 
         img {
         display: block;
+        max-width: 100%;
+        height: auto;
         transition: opacity .1s linear;
         }        
     }
@@ -385,7 +457,10 @@ hr {
         font-weight: 300;
         color: $baseGreyText;
     }
-
+    @media (max-width:770px) {
+        justify-content: center;
+        margin-top: 50px;
+    }
  }
 
  
@@ -680,6 +755,11 @@ hr {
         }      
         }
     }
+}
+// Logos
+
+.logos {
+    width: 100%;
 }
 
 // Works 
