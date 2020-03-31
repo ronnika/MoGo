@@ -37,8 +37,9 @@ hr {
 
 .container {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1215px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* Intro */
@@ -225,11 +226,6 @@ hr {
         text-transform: uppercase;
     
         opacity: 0.7;
-        .slider__num {
-            margin-right: 3px;
-            font-size: 24px;
-            font-weight: 700;
-        }
         &--active {
             opacity: 1;           
 
@@ -331,42 +327,28 @@ hr {
         width: 380px;
         background-color: $baseBlueBg;
         position: relative;
-    }
-
-    &__inner:hover {
-        .card__img {
-            transform: translate3d(-10px, -10px, 0);  
+        &:hover {
+            .card__img {
+                transform: translate3d(-10px, -10px, 0);  
+                img {
+                    opacity: 0.1; 
+                 }
+            }  
+            .card__text {           
+                opacity: 1; 
+            }         
         }
-       
-    }
-
-    &__inner:hover  {
-        .card__img {
-            img {
-               opacity: 0.1; 
-            }
-        }
-    }
-
-    &__inner:hover {
-        .card__text {           
-            opacity: 1; 
-        }
-    }
-   
-    
+    }    
     &__img {
         background: linear-gradient(to bottom, #e1cb7b,  #da7373);
         transition: transform .2s linear;
     }
-
     &__img  { 
         img {
         display: block;
         transition: opacity .1s linear;
         }        
     }
-
     &__text {
         width: 100%;
         position: absolute;
@@ -1000,7 +982,7 @@ hr {
             width: 30%;
         }
         &--3 {
-            width: 22.5%;
+            width: 22.8%;
         }
     }
     &__logo {
